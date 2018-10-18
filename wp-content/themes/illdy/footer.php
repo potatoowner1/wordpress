@@ -71,14 +71,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 <?php } ?>
 
 <?php if ( 1 == $show_footer_copyright ) { ?>
-	<div class="bottom-footer">
-		<div class="container">
-			<p class="copyright">
-				<span><?php printf( '%s <a href="%s" title="%s" target="_blank">%s</a>.', __( 'Theme:', 'illdy' ), esc_url( 'http://colorlib.com/wp/themes/illdy' ), __( 'Illdy', 'illdy' ), __( 'Illdy', 'illdy' ) ); ?></span>
-				<span class="bottom-copyright" data-customizer="copyright-credit"><?php echo illdy_sanitize_html( $footer_copyright ); ?></span>
-			</p>
-		</div>
-	</div>
+
 <?php } ?>
 
 <?php if ( 'page' == get_option( 'show_on_front' ) && is_front_page() && get_theme_mod( 'illdy_go_to_top', false ) ) : ?>

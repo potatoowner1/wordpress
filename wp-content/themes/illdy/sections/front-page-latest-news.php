@@ -65,36 +65,26 @@ if ( $post_query->have_posts() || '' != $general_title || '' != $general_entry |
 			</a>
 		<?php endif; ?>
 
-		<?php if ( $post_query->have_posts() ) : ?>
+<?php if ( $post_query->have_posts() ) : ?>
 			<div class="section-content">
-				<div class="container">
-					<div class="row blog-carousel">
+				<div class="container" style="width:100% !important;">
+					<div class="row brd" style="100% width;">
 						<?php $counter = 0; ?>
 						<?php while ( $post_query->have_posts() ) : ?>
 							<?php $post_query->the_post(); ?>
 							<?php $post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'illdy-front-page-latest-news' ); ?>
 
-							<div class="illdy-blog-post col-md-4 col-sm-6 col-xs-12">
-								<div class="post" style="
-								<?php
-								if ( ! $post_thumbnail && ! get_theme_mod( 'illdy_disable_random_featured_image' ) ) :
-									echo 'padding-top: 40px;';
-endif;
-?>
-">
-									<?php if ( has_post_thumbnail() ) { ?>
-										<div class="post-image" style="background-image: url('<?php echo esc_url( $post_thumbnail[0] ); ?>');"></div>
-									<?php } elseif ( get_theme_mod( 'illdy_disable_random_featured_image' ) ) { ?>
-										<div class="post-image"  style="background-image: url('<?php echo illdy_get_random_featured_image(); ?>');"></div><!--/.blog-post-image-->
-									<?php } ?>
-									<h5><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" class="post-title"><?php the_title(); ?></a></h5>
-									<div class="post-entry">
-										<?php echo wp_trim_words( get_the_content(), $number_of_words ); ?>
-									</div><!--/.post-entry-->
-									<a href="<?php the_permalink(); ?>" title="<?php _e( 'Read more', 'illdy' ); ?>" class="post-button"><i class="fa fa-chevron-circle-right"></i><?php _e( 'Read more', 'illdy' ); ?>
-									</a>
-								</div><!--/.post-->
-							</div><!--/.col-sm-4-->
+							<div class="col-md-6 col-xs-12"><div class="FBaboveframe"><h1 class="FBabovetxt">Pepsi video</h1></div>
+								<div class="embed fb-video" data-href="https://www.facebook.com/pepsi/videos/vb.339150749455906/317971252092544/?type=3&amp;theater"  data-show-text="true"><blockquote cite="https://www.facebook.com/pepsi/videos/317971252092544/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pepsi/videos/317971252092544/">
+
+								
+
+							Pepsi Presents | The PUMA x Pepsi Collection</a><p>Legacies never go out of style. A walk down a city street reveals that the PUMA x Pepsi collection shines, pops, and flexes in every era. &#064;Pepsi &#064;Puma #pumaxpepsi Capsule collection available at participating retailers.</p>Posted by <a href="https://www.facebook.com/pepsi/">Pepsi</a> on Friday, October 5, 2018</blockquote></div></div>
+
+
+							<div class="col-md-6 col-xs-12 embed"><a class="twitter-timeline" data-width="500" height="650" data-theme="light" href="https://twitter.com/Tesla?ref_src=twsrc%5Etfw">Tweets by Tesla</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
+
+							
 							<?php $counter ++; ?>
 						<?php endwhile; ?>
 					</div><!--/.row-->
@@ -106,3 +96,15 @@ endif;
 
 <?php }// End if().
 	?>
+
+
+
+
+	<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
