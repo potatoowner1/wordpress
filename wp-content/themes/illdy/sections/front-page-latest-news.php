@@ -67,7 +67,7 @@ if ( $post_query->have_posts() || '' != $general_title || '' != $general_entry |
 
 <?php if ( $post_query->have_posts() ) : ?>
 			<div class="section-content">
-				<div class="container" style="width:100%;">
+				<div class="container" style="width:100%;display:flex;justify-content:center;">
 					<div class="row brd" style="width:100%;">
 						<?php $counter = 0; ?>
 						<?php while ( $post_query->have_posts() ) : ?>
