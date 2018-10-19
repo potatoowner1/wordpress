@@ -68,9 +68,7 @@ if ( current_user_can( 'edit_theme_options' ) ) {
 			</div><!--/.row-->
 		</div><!--/.container-->
 	</footer>
-<?php } ?>
 
-<?php if ( 1 == $show_footer_copyright ) { ?>
 
 <?php } ?>
 

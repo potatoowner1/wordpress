@@ -74,7 +74,7 @@ if ( $post_query->have_posts() || '' != $general_title || '' != $general_entry |
 							<?php $post_query->the_post(); ?>
 							<?php $post_thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'illdy-front-page-latest-news' ); ?>
 
-							<div class="col-md-6 col-xs-12"><div class="FBaboveframe"><h1 class="FBabovetxt">Pepsi video</h1></div>
+							<div class="col-md-6 col-xs-12">
 								<div class="embed fb-video" data-href="https://www.facebook.com/pepsi/videos/vb.339150749455906/317971252092544/?type=3&amp;theater"  data-show-text="true"><blockquote cite="https://www.facebook.com/pepsi/videos/317971252092544/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/pepsi/videos/317971252092544/">
 
 								
@@ -82,7 +82,7 @@ if ( $post_query->have_posts() || '' != $general_title || '' != $general_entry |
 							Pepsi Presents | The PUMA x Pepsi Collection</a><p>Legacies never go out of style. A walk down a city street reveals that the PUMA x Pepsi collection shines, pops, and flexes in every era. &#064;Pepsi &#064;Puma #pumaxpepsi Capsule collection available at participating retailers.</p>Posted by <a href="https://www.facebook.com/pepsi/">Pepsi</a> on Friday, October 5, 2018</blockquote></div></div>
 
 
-							<div class="col-md-6 col-xs-12 embed"><a class="twitter-timeline" data-width="500" height="650" data-theme="light" href="https://twitter.com/Tesla?ref_src=twsrc%5Etfw">Tweets by Tesla</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
+							<div class="col-md-6 col-xs-12 embed"><a class="twitter-timeline" data-width="500" height="500" data-theme="light" href="https://twitter.com/Tesla?ref_src=twsrc%5Etfw">Tweets by Tesla</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
 
 							
 							<?php $counter ++; ?>
@@ -93,14 +93,9 @@ if ( $post_query->have_posts() || '' != $general_title || '' != $general_entry |
 		<?php endif; ?>
 		<?php wp_reset_postdata(); ?>
 	</section><!--/#latest-news.front-page-section-->
-
 <?php }// End if().
 	?>
-
-
-
-
-	<div id="fb-root"></div>
+<div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
